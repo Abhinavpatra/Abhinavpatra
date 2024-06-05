@@ -1,5 +1,4 @@
 ### Hi there 👋
-
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=30&duration=3000&pause=500&color=F7D28B&width=435&lines=Abhinav+Patra;Full-Stack+Web+Developer;Open+Source+Enthusiast" alt="Typing SVG">
 </div>
