@@ -34,7 +34,7 @@
   </a>
 </p>
 
-"Welcome to my GitHub profile!</br></br></br>
+Welcome to my GitHub profile!</br></br></br>
 🌐 Let's connect and build something amazing together!
 </br>
  <a href="https://www.linkedin.com/in/abhinav-patra1st/" target="_blank" rel="noreferrer" >
