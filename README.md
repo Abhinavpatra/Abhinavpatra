@@ -35,7 +35,7 @@
 </p>
 
 Welcome to my GitHub profile!</br></br></br>
-🌐 Let's connect and build something amazing together!
+🌐 Connect for queries or doubts.
 </br>
  <a href="https://www.linkedin.com/in/abhinav-patra1st/" target="_blank" rel="noreferrer" >
    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo" width="40" height="40">
