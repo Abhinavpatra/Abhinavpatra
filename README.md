@@ -36,8 +36,7 @@
     <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/>
   </a>
 <a href="https://www.npmjs.com/package/ethers" target="_blank" rel="noreferrer">
-    <img src=" ![Screenshot 2024-10-02 at 11-19-49 Ethers Logo PNG Vector (SVG) Free Download](https://github.com/user-attachments/assets/ed2dd693-1d1f-43c5-9d71-e55c87da091d)
-" alt="postman" width="40" height="40"/>
+    <img src="https://seeklogo.com/images/E/ethers-logo-D5B86204D8-seeklogo.com.png" alt="postman" width="40" height="40"/>
 
   
 </a>
