@@ -35,7 +35,9 @@
   <a href="https://postman.com" target="_blank" rel="noreferrer">
     <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/>
   </a>
- ![Screenshot 2024-10-02 at 11-19-49 Ethers Logo PNG Vector (SVG) Free Download](https://github.com/user-attachments/assets/ed2dd693-1d1f-43c5-9d71-e55c87da091d)
+
+![Screenshot 2024-10-02 at 11-19-49 Ethers Logo PNG Vector (SVG) Free Download](https://github.com/user-attachments/assets/e47dcffa-45d3-4040-bd51-8dc22a2d48d3)
+
 
   <a href="https://www.cplusplus.com/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> 
