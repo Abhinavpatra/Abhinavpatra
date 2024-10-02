@@ -26,6 +26,18 @@
   <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> 
   </a>
+  <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
+    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/>
+  </a>
+  <a href="https://www.solana.com/" target="_blank" rel="noreferrer">
+    <img src="https://cryptologos.cc/logos/solana-sol-logo.svg?v=024" alt="solana" width="40" height="40"/>
+  </a>
+  <a href="https://postman.com" target="_blank" rel="noreferrer">
+    <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/>
+  </a>
+  <a href="https://www.npmjs.com/package/ethers" target="_blank" rel="noreferrer">
+    <img src="https://docs.ethers.org/v5/favicon.png" alt="etherjs" width="40" height="40"/>
+  </a>
   <a href="https://www.cplusplus.com/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> 
   </a>
@@ -50,8 +62,7 @@ Welcome to my GitHub profile!</br></br></br>
 🔭 Check out my portfolio to see my latest projects here at   <a href="https://github.com/Abhinavpatra" target="_blank" rel="noreferrer">Github </a>
 
 </br>
-📄 Download my resume <a href="https://drive.google.com/file/d/1AqZGbpudSt0th1_fC2vg__5LJFcWqMzA/view?usp=drive_link" target="_blank" rel="noreferrer">
+📄 Download my resume from my Linkedin
    here
-  </a>
 </br>
 <h3 align="center">Let's make something real! ⚡</h3>
