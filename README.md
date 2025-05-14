@@ -1,4 +1,4 @@
-# <img src="https://media.giphy.com/media/g0jg6lMcNORSlOv9Zb/giphy.gif?cid=790b7611kcpr64hjyt7jbve4vdkvw2m8rz4s86bbsgr38w18&ep=v1_stickers_search&rid=giphy.gif&ct=ts" width="40"> Hi, I'm Abhinav Patra
+# <img src="https://media.giphy.com/media/g0jg6lMcNORSlOv9Zb/giphy.gif?cid=790b7611kcpr64hjyt7jbve4vdkvw2m8rz4s86bbsgr38w18&ep=v1_stickers_search&rid=giphy.gif&ct=ts" width="40">, I'm Abhinav Patra
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&pause=100&color=00A3C8&vCenter=true&width=600&lines=Web+and+Blockchain+Developer;Always+Learning" alt="Typing SVG" />
