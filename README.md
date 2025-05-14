@@ -8,7 +8,7 @@
 ## About Me
 
 <p>
-  Full-stack and Blockchain Developer with a passion for building innovative and efficient web applications. My expertise lies in crafting user-friendly interfaces and robust backend systems, with a strong interest in the decentralized world of Web3. I'm always eager to learn new technologies and apply them to solve real-world problems.
+  Full-stack and Blockchain Developer with a passion for building innovative and efficient web applications. My expertise lies in simply to have the ability to learn and not stop.
 </p>
 
 ---
@@ -233,6 +233,7 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Abhinavpatra/AbhinavPatra/output/github-snake.svg" />
   <img alt="github-snake" src="https://raw.githubusercontent.com/Abhinavpatra/AbhinavPatra/output/github-snake.svg" />
 </picture>
+
 ---
 
 <p align="center">
