@@ -3,13 +3,15 @@
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&pause=100&color=00A3C8&vCenter=true&width=600&lines=Web+and+Blockchain+Developer;Always+Learning" alt="Typing SVG" />
 </p>
-![](https://komarev.com/ghpvc/?username=abhinavpatra&abbreviated=true)
+
 
 ## About Me
 
 <p>
   Full-stack and Blockchain Developer with a passion for building innovative and efficient web applications. My expertise lies in simply to have the ability to learn and not stop.
 </p>
+
+![](https://komarev.com/ghpvc/?username=abhinavpatra&color=brightgreen&abbreviated=true&base=1320&style=for-the-badge)
 
 ---
 
