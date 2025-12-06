@@ -161,42 +161,6 @@
 
 ---
 
-## <img src="https://img.icons8.com/color/48/project.png" width="30"/> Projects
-
-<details>
-  <summary><b>Solana Transaction Portal</b> - <a href="https://sol-transaction-manager.vercel.app/" target="_blank">Live Demo</a></summary>
-  <div>
-    <p>Web application for sending SOL securely on the Solana blockchain, supporting Devnet and Mainnet.</p>
-    <code>Next.js</code> <code>React</code> <code>Tailwind CSS</code> <code>Solana Web3.js</code> <code>TypeScript</code> <code>Node.js</code>
-  </div>
-</details>
-
-<details>
-  <summary><b>Wallet Generator</b> - <a href="https://wallet-two-azure-27.vercel.app/" target="_blank">Live Demo</a></summary>
-  <div>
-    <p>Feature-rich wallet generator for Solana and Ethereum with mnemonic phrase storage, dark mode, and secure local storage.</p>
-    <code>Next.js</code> <code>TypeScript</code> <code>Tailwind CSS</code> <code>Headless UI</code>
-  </div>
-</details>
-
-<details>
-  <summary><b>Medium-like Blogging Platform</b> - <a href="https://medium-abhinav.vercel.app/signup" target="_blank">Live Demo</a></summary>
-  <div>
-    <p>Full-stack blogging platform inspired by Medium with user authentication and CRUD operations.</p>
-    <code>React</code> <code>TypeScript</code> <code>Vite</code> <code>Tailwind CSS</code> <code>Axios</code> <code>Hono</code> <code>Prisma</code> <code>PostgreSQL</code> <code>Cloudflare Workers</code>
-  </div>
-</details>
-
-<details>
-  <summary><b>Voting Project (Solidity Smart Contract)</b></summary>
-  <div>
-    <p>Solidity smart contract implementing a voting system with structs, enums, mappings, and modifiers, ensuring voter eligibility and voting rule adherence.</p>
-    <code>Solidity</code> <code>Smart Contracts</code> <code>Blockchain</code>
-  </div>
-</details>
-
----
-
 ## <img src="https://img.icons8.com/color/48/graduation-cap--v1.png" width="30"/> Education
 
 <details>
