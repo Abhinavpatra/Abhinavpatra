@@ -13,18 +13,6 @@
 
 ![](https://komarev.com/ghpvc/?username=abhinavpatra&color=brightgreen&abbreviated=true&base=1320&style=for-the-badge)
 
----
-
-<div align="center">
-  
-  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=abhinavpatra&hide_progress=false&layout=donut&theme=dark)
-  
-  ![Abhinav's GitHub stats](https://github-readme-stats.vercel.app/api?username=abhinavpatra&theme=dark&show_icons=true)
-  
-</div>
-
----
-
 ## <img src="https://media.giphy.com/media/Zebztgv7jmkoLe1DoY/giphy.gif?cid=ecf05e473t22i4scweo65028p2tlkre0zpc4x1aa0808tuu8&ep=v1_stickers_search&rid=giphy.gif&ct=s" width="30" align="absmiddle"> I'm currently learning
 
 - Golang fundamentals <img src="https://media.giphy.com/media/zYi4Qdbs4LUmCrVD82/giphy.gif?cid=790b7611j85x6cy672oe01j55fs6y16ua0uirzdr3jxtel3x&ep=v1_stickers_search&rid=giphy.gif&ct=" width="25" align="absmiddle">
