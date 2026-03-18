@@ -193,66 +193,89 @@
 <p align="center">
   ⭐️ Thanks for visiting my profile! ⭐️
 </p>
-## Complete Step-by-Step: Lex & YACC Setup
+
+
+
+Good that it's working! Now looking at your assignment (Image 3), this is the **CHIK/CHEK/INDIA rhyme detector** experiment. Here's exactly how to run it:
 
 ---
 
+## Your Assignment Files
 
-Here are both files:
-
-**sound.y**
-```
+**sound.l** (LEX)
+```c
 %{
 #include <stdio.h>
-int yylex();
-void yyerror(const char *s);
+#include <ctype.h>
+#include <stdlib.h>
+#include "y.tab.h"
+extern int yylval;
 %}
 
-%token SOUND PLACE INVALID
-
 %%
-start : SOUND  { printf("Sound detected\n"); }
-      | PLACE   { printf("Place detected\n"); }
-      | INVALID { printf("Invalid input\n"); }
-      ;
+"chik"  { printf("CHIK"); return CHIK; }
+"chek"  { printf("CHEK"); return CHEK; }
+"india" { printf("INDIA"); return INDIA; }
 %%
 
 int main() {
-    yyparse();
+    yylex();
     return 0;
 }
 
-void yyerror(const char *s) {
+int yywrap() {}
+```
+
+**sound.y** (YACC)
+```c
+%{
+#include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include "lex.yy.c"
+%}
+
+%token CHIK CHEK INDIA
+
+%%
+rhyme : sound place
+      ;
+sound : CHIK CHEK
+      ;
+place : INDIA
+      ;
+%%
+
+void yyerror(char *s) {
     printf("%s is error\n", s);
 }
 ```
 
-**sound.l**
-```
-%{
-#include "y.tab.h"
-%}
+---
 
-%%
-"a"+  { return SOUND; }
-"b"+  { return PLACE; }
-"\n"  { return 0; }
-.     { return INVALID; }
-%%
+## Commands to Run
 
-int yywrap() { return 1; }
+```bash
+# Step 1
+bison -dy sound.y
+
+# Step 2
+flex sound.l
+
+# Step 3
+gcc lex.yy.c y.tab.c -o sound -lfl
+
+# Step 4
+./sound
 ```
 
 ---
 
-### Now run these commands one by one:
+## Expected Output
 
-```bash
-bison -dy sound.y
-flex sound.l
-gcc lex.yy.c y.tab.c -o sound -lfl
-./sound
-```
+| Input typed | Output |
+|-------------|--------|
+| `chik chek india` | `CHIK CHEK INDIA` → valid |
+| anything else | `error` |
 
-Type `aaa` and press Enter → should print **Sound detected**
-Type `bbb` and press Enter → should print **Place detected**
+Type input and press **Ctrl+D** to end input and see result.
