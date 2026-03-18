@@ -196,86 +196,73 @@
 
 
 
-Good that it's working! Now looking at your assignment (Image 3), this is the **CHIK/CHEK/INDIA rhyme detector** experiment. Here's exactly how to run it:
+ You're right! I can see the issue. When you type `chik chek india` it only prints `CHIK` and stops. 
+
+The problem is your **YACC grammar is too strict** — it expects all three words together as one parse, but the LEX file prints tokens individually and exits.
 
 ---
 
-## Your Assignment Files
+## The fix — update both files:
 
-**sound.l** (LEX)
-```c
+```bash
+cat > sound.y << 'EOF'
 %{
 #include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
-#include "y.tab.h"
-extern int yylval;
-%}
-
-%%
-"chik"  { printf("CHIK"); return CHIK; }
-"chek"  { printf("CHEK"); return CHEK; }
-"india" { printf("INDIA"); return INDIA; }
-%%
-
-int main() {
-    yylex();
-    return 0;
-}
-
-int yywrap() {}
-```
-
-**sound.y** (YACC)
-```c
-%{
-#include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
-#include "lex.yy.c"
+int yylex(void);
+void yyerror(const char *s);
 %}
 
 %token CHIK CHEK INDIA
 
 %%
-rhyme : sound place
-      ;
-sound : CHIK CHEK
-      ;
-place : INDIA
+rhyme : CHIK CHEK INDIA { printf("Valid rhyme: CHIK CHEK INDIA\n"); }
       ;
 %%
 
-void yyerror(char *s) {
-    printf("%s is error\n", s);
+int main() {
+    yyparse();
+    return 0;
 }
+
+void yyerror(const char *s) {
+    printf("Invalid input!\n");
+}
+EOF
 ```
 
----
+```bash
+cat > sound.l << 'EOF'
+%{
+#include "y.tab.h"
+%}
 
-## Commands to Run
+%%
+"chik"   { return CHIK; }
+"chek"   { return CHEK; }
+"india"  { return INDIA; }
+[ \t\n]  { }
+.        { return -1; }
+%%
+
+int yywrap() { return 1; }
+EOF
+```
 
 ```bash
-# Step 1
-bison -dy sound.y
-
-# Step 2
-flex sound.l
-
-# Step 3
-gcc lex.yy.c y.tab.c -o sound -lfl
-
-# Step 4
+bison -dy sound.y && flex sound.l && gcc lex.yy.c y.tab.c -o sound -lfl
 ./sound
 ```
 
 ---
 
-## Expected Output
+## Expected output:
+```
+chik chek india
+Valid rhyme: CHIK CHEK INDIA
+```
+```
+hello world
+Invalid input!
+```
 
-| Input typed | Output |
-|-------------|--------|
-| `chik chek india` | `CHIK CHEK INDIA` → valid |
-| anything else | `error` |
-
-Type input and press **Ctrl+D** to end input and see result.
+Press **Ctrl+D** after typing input.
