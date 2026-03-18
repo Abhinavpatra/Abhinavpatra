@@ -193,3 +193,104 @@
 <p align="center">
   ⭐️ Thanks for visiting my profile! ⭐️
 </p>
+## Complete Step-by-Step: Lex & YACC Setup
+
+---
+
+### Your Files (correctly named)
+
+**File 1: `sound.l`** (LEX file)
+```c
+%{
+#include <stdio.h>
+#include <stdlib.h>
+#include "y.tab.h"
+extern int yylval;
+%}
+
+%%
+"a"+ { printf("SOUND"); return SOUND; }
+" "  { }
+"\n" { return 0; }
+.    { return INVALID; }
+%%
+
+int yywrap() {
+    return 1;
+}
+```
+
+---
+
+**File 2: `sound.y`** (YACC file)
+```c
+%{
+#include <stdio.h>
+%}
+
+%token SOUND PLACE INVALID
+
+%%
+start : SOUND { printf("Sound detected\n"); }
+      | PLACE  { printf("Place detected\n"); }
+      | INVALID { printf("Invalid input\n"); }
+      ;
+%%
+
+int main() {
+    yyparse();
+    return 0;
+}
+
+int yyerror(char *s) {
+    printf("%s is error\n", s);
+    return 0;
+}
+```
+
+---
+
+### Commands — Run In This Exact Order
+
+```bash
+# Step 1: Compile YACC first (generates y.tab.c and y.tab.h)
+yacc -d sound.y
+
+# Step 2: Compile LEX (generates lex.yy.c)
+lex sound.l
+
+# Step 3: Link everything together
+gcc lex.yy.c y.tab.c -o sound -ll -ly
+
+# Step 4: Run
+./sound
+```
+
+---
+
+### If Step 3 gives errors, try these alternatives
+
+```bash
+# Alternative 1 (most common fix)
+gcc lex.yy.c y.tab.c -o sound -lfl
+
+# Alternative 2 (if flex is installed instead of lex)
+flex sound.l
+bison -dy sound.y
+gcc lex.yy.c y.tab.c -o sound -lfl
+```
+
+---
+
+### Quick Checklist
+
+| Check | What to do |
+|-------|-----------|
+| LEX file | Must be named `sound.l` |
+| YACC file | Must be named `sound.y` |
+| YACC compiled first | `y.tab.h` must exist before LEX compiles |
+| Library flag | Try `-ll`, `-ly` or `-lfl` depending on your system |
+
+---
+
+Paste your exact error message here if it still fails and I'll fix it instantly.
