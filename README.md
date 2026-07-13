@@ -1,5 +1,7 @@
-Learn more about me at: abhinavpatra.tech AND linkedin.com/in/abhinavpatra
-
+<p align="center">
+  <a href="https://abhinavpatra.tech">abhinavpatra.tech</a> | 
+  <a href="https://linkedin.com/in/abhinavpatra">linkedin.com/in/abhinavpatra</a>
+</p>
 
 
 <picture>
@@ -11,5 +13,5 @@ Learn more about me at: abhinavpatra.tech AND linkedin.com/in/abhinavpatra
 ---
 
 <p align="center">
-  ⭐️ Thanks for visiting my profile! ⭐️
+  Thanks for visiting my page.
 </p>
