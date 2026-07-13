@@ -1,4 +1,4 @@
-Learn more about me at: https://abhinavpatra.tech OR https://linkedin.com/in/abhinavpatra
+Learn more about me at: abhinavpatra.tech AND linkedin.com/in/abhinavpatra
 
 
 
