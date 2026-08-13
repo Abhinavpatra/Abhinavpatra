@@ -15,7 +15,10 @@
 <p align="center">
   Thanks for visiting my page.
 </p>
+
+
 ```c
+
 #include <GL/glut.h>
 #include <math.h>
 
@@ -91,4 +94,5 @@ int main(int argc, char **argv)
 
     return 0;
 }
+
 ```
