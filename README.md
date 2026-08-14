@@ -19,78 +19,109 @@
 
 ```c
 
-#include <GL/glut.h>
-#include <math.h>
+#include <stdio.h>
 
-int xst = 60, yst = 50;
-int xend = 400, yend = 300;
-
-void drawPixel(int x, int y)
+int main()
 {
-    glBegin(GL_POINTS);
-    glVertex2i(x, y);
-    glEnd();
-}
+    int n, epochs;
+    double learning_rate;
 
-void DDA(int xs, int ys, int xe, int ye)
-{
-    int dx = xe - xs;
-    int dy = ye - ys;
+    printf("Weighted Linear Regression using Gradient Descent\n");
+    printf("--------------------------------------------------\n");
 
-    int steps = (abs(dx) > abs(dy)) ? abs(dx) : abs(dy);
+    printf("Enter number of data points: ");
+    scanf("%d", &n);
 
-    float Xinc = (float)dx / steps;
-    float Yinc = (float)dy / steps;
+    double x[n], y[n], weight[n];
 
-    float x = xs;
-    float y = ys;
+    printf("Enter X, Y and Weight values:\n");
 
-    for (int i = 0; i <= steps; i++)
+    for (int i = 0; i < n; i++)
     {
-        drawPixel((int)round(x), (int)round(y));
-
-        x += Xinc;
-        y += Yinc;
+        printf("Data %d (X Y Weight): ", i + 1);
+        scanf("%lf %lf %lf", &x[i], &y[i], &weight[i]);
     }
-}
 
-void display()
-{
-    glClear(GL_COLOR_BUFFER_BIT);
+    printf("Enter Learning Rate: ");
+    scanf("%lf", &learning_rate);
 
-    glColor3f(1.0, 1.0, 1.0);
+    printf("Enter Number of Epochs: ");
+    scanf("%d", &epochs);
 
-    DDA(xst, yst, xend, yend);
+    // Initial values of slope and intercept
+    double w = 0.0;   // slope
+    double b = 0.0;   // intercept
 
-    glFlush();
-}
+    printf("\nTraining Started...\n");
 
-void init()
-{
-    glClearColor(0.0, 0.0, 0.0, 1.0);
+    for (int epoch = 1; epoch <= epochs; epoch++)
+    {
+        double dw = 0.0;
+        double db = 0.0;
+        double weighted_error = 0.0;
+        double total_weight = 0.0;
 
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
+        // Calculate gradients
+        for (int i = 0; i < n; i++)
+        {
+            double predicted = w * x[i] + b;
+            double error = predicted - y[i];
 
-    gluOrtho2D(0, 500, 0, 500);
-}
+            dw += weight[i] * error * x[i];
+            db += weight[i] * error;
 
-int main(int argc, char **argv)
-{
-    glutInit(&argc, argv);
+            weighted_error += weight[i] * error * error;
+            total_weight += weight[i];
+        }
 
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+        // Average gradients
+        dw = (2.0 / total_weight) * dw;
+        db = (2.0 / total_weight) * db;
 
-    glutInitWindowSize(500, 500);
-    glutInitWindowPosition(100, 100);
+        // Update parameters
+        w = w - learning_rate * dw;
+        b = b - learning_rate * db;
 
-    glutCreateWindow("DDA Line Drawing Algorithm");
+        // Calculate WMSE
+        double wmse = weighted_error / total_weight;
 
-    init();
+        printf("Epoch %d WMSE = %.6f\n", epoch, wmse);
+    }
 
-    glutDisplayFunc(display);
+    printf("----------------------------------------\n");
+    printf("Training Completed Successfully\n");
+    printf("----------------------------------------\n");
 
-    glutMainLoop();
+    printf("Final Weight (Slope) = %.4f\n", w);
+    printf("Final Bias (Intercept) = %.4f\n", b);
+
+    printf("Regression Equation:\n");
+    printf("Y = %.4fX + %.4f\n", w, b);
+
+    printf("--------------------------------------------------\n");
+    printf("X\tActual Y\tWeight\tPredicted Y\n");
+    printf("--------------------------------------------------\n");
+
+    double final_wmse = 0.0;
+    double total_weight = 0.0;
+
+    for (int i = 0; i < n; i++)
+    {
+        double predicted = w * x[i] + b;
+        double error = predicted - y[i];
+
+        final_wmse += weight[i] * error * error;
+        total_weight += weight[i];
+
+        printf("%.2f\t%.2f\t\t%.2f\t%.2f\n",
+               x[i], y[i], weight[i], predicted);
+    }
+
+    final_wmse /= total_weight;
+
+    printf("--------------------------------------------------\n");
+    printf("Final Weighted Mean Squared Error (WMSE) = %.6f\n",
+           final_wmse);
 
     return 0;
 }
